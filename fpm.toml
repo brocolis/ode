@@ -1,0 +1,14 @@
+name = "ode"
+version = "0.1.0"
+license = "license"
+author = "Jane Doe"
+maintainer = "jane.doe@example.com"
+copyright = "2020 Jane Doe"
+
+[library]
+source-dir="src"
+
+[[test]]
+name="runTests"
+source-dir="test"
+main="main.f90"
