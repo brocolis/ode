@@ -1,11 +1,13 @@
 module ode
 implicit none
-contains
 
-pure real function dydx_prototype(x, y)
-    real, intent(in) :: x, y
-    dydx_prototype = x*y
-end function
+interface
+    pure real function dydx_prototype(x, y)
+        real, intent(in) :: x, y
+    end function
+end interface
+
+contains
 
 pure real function rk4(f, x, y, h)
     procedure(dydx_prototype) :: f
